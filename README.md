@@ -58,7 +58,7 @@ Because this is a user quadlet, all `systemctl` commands must include the `--use
 
 `journalctl --user -u convertx -f`
 
-Once running, access the converter at `http://[Your-IP]:3002`.
+Once running, access the converter at `http://[Your-IP]:3000`.
 
 5\. Maintenance
 ---------------
