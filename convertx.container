@@ -1,0 +1,30 @@
+[Unit]
+Description=ConvertX File Converter Service
+After=network-online.target
+
+[Container]
+Image=ghcr.io/c4illin/convertx:latest
+ContainerName=convertx
+# Binding to 0.0.0.0 makes it accessible on your local network (e.g., pihole1.lan)
+PublishPort=0.0.0.0:3000:3000
+
+# Storage: %h automatically points to your home directory
+Volume=%h/convertx/data:/app/data:Z
+
+# Environment Configuration
+Environment=TZ=America/New_York
+# IMPORTANT: Users should change this secret for security
+Environment=JWT_SECRET=
+Environment=HTTP_ALLOWED=true
+
+# Maintenance
+AutoUpdate=registry
+LogDriver=k8s-file
+PodmanArgs=--log-opt=max-size=10m --log-opt=max-file=3
+
+[Service]
+Restart=unless-stopped
+RestartSec=10
+
+[Install]
+WantedBy=default.target
