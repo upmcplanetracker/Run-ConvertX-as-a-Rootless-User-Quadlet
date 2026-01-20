@@ -1,7 +1,7 @@
 ConvertX Podman User Quadlet
 ============================
 
-**Disclaimer:** I am not affiliated with, associated, authorized, endorsed by, or in any way officially connected with the ConvertX project.
+**Disclaimer:** I am not affiliated with, associated, authorized, endorsed by, or in any way officially connected with the ConvertX project.  This should be a drop in replacement for a Docker Compose file but, as always, backup any data you don't want to lose before trying this.
 
 This guide covers deploying **ConvertX**—a powerful, multi-format file converter—as a **User (Rootless) Quadlet** on Ubuntu 25.10.
 
